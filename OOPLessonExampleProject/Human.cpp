@@ -1,10 +1,25 @@
-#include "student.h"
+#include "Human.h"
 
-
-
-float Student::get_avg_mark() {
-	return avg_mark;
+string Human::get_name() {
+	return name;
 }
+
+void Human::set_name(string n) {
+	name = n;
+}
+
+string ::get_surname() {
+	return name;
+}
+
+void Student::set_surname(string n) {
+	surname = n;
+}
+
+int Student::get_age() {
+	return age;
+}
+
 
 void Student::set_avg_mark(float mark) {
 	if (mark >= MIN_MARK && mark <= MAX_MARK) {
@@ -23,10 +38,10 @@ Student::Student() {
 
 // constructor with params (with args)
 Student::Student(string n, string sname, int a, float mark) {
-	cout << "constructor with params" << endl;
-	set_name(n)
-	set_surname(sname);
-	set_age(a);
+	//cout << "constructor with params" << endl;
+	name = n;
+	surname = sname;
+	age = a;
 	avg_mark = mark;
 }
 
@@ -55,6 +70,6 @@ void Student::init_default() {
 }
 
 string Student::convert_to_string() {
-	return get_name() + " " + get_surname() + " (age = " + to_string(get_age())
+	return name + " " + surname + " (age = " + to_string(age)
 		+ ", average mark = " + to_string(avg_mark) + ")";
 }

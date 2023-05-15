@@ -3,9 +3,6 @@
 
 class Doctor {
 
-	string name;
-	string surname;
-	int age;
 	int experience;
 	string skill;
 
@@ -16,13 +13,7 @@ public:
 
 	~Doctor();
 
-	string get_name();
-	void set_name(string n);
-	string get_surname();
-	void set_surname(string n);
-	int get_age();
-	void set_age(int a);
-	float get_avg_mark();
+	void get_experience();
 	void set_experience(int exp);
 
 	string get_skill();
