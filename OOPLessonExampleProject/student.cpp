@@ -60,16 +60,6 @@ Student::Student(string n, string sname) {
 	surname = sname;
 }
 
-Student::Student(int a) {
-	//cout << "constructor with params" << endl;
-	age = a;
-}
-
-Student::Student(float mark) {
-	//cout << "constructor with params" << endl;
-	avg_mark = mark;
-}
-
 Student::~Student() {
 	//cout << "called Student destructor" << endl;
 }

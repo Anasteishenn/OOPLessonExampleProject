@@ -1,16 +1,14 @@
-#include "student.h"
+#include "group.h"
 
 
 class Manager {
 public:
-	float calculate_avg_mark(Group group, int size) {
-		float avg = 0;
+	static float calculate_avg_age(Group group);
+	static Student find_best_student(Group group);
+	static Student find_worst_student(Group group);
 
-		for (int i = 0; i < size; i++)
-		{
-			avg += list[i].get_avg_mark();
-		}
-		return avg / size;
-	}
+	static Group find_best_students(Group group);
+	static Group find_worst_students(Group group);
 
+	static float calculate_avg_mark(Group group);
 };

@@ -38,5 +38,11 @@
     <ClInclude Include="manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="teacher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="doctor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

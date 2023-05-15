@@ -1,24 +1,19 @@
 #pragma once
 #include "main.h"
 
-class Student {
-private:
+class Teacher {
+
 	string name;
 	string surname;
 	int age;
-	float avg_mark;
+	int power;
 
 public:
-	static const int MIN_AGE = 0;
-	static const int MAX_AGE = 160;
-	static const int MIN_MARK = 0;
-	static const int MAX_MARK = 10;
+	Teacher();
+	Teacher(string n, string sname, int a, int power);
+	Teacher(string n, string sname);
 
-	Student();
-	Student(string n, string sname, int a, float mark);
-	Student(string n, string sname);
-
-	~Student();
+	~Teacher();
 
 	string get_name();
 	void set_name(string n);
@@ -32,6 +27,4 @@ public:
 	void init(string n, string sname, int a, float mark);
 	void init_default();
 	string convert_to_string();
-
-
 };
