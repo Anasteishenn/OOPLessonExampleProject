@@ -1,13 +1,11 @@
 #pragma once
 #include "human.h"
 
-class Student:public Human {
+class Student : public Human {
 private:
 	float avg_mark;
 
 public:
-	static const int MIN_AGE = 0;
-	static const int MAX_AGE = 160;
 	static const int MIN_MARK = 0;
 	static const int MAX_MARK = 10;
 

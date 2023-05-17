@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="doctor.cpp" />
     <ClCompile Include="group.cpp" />
     <ClCompile Include="group.h" />
     <ClCompile Include="Human.cpp" />

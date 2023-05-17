@@ -11,7 +11,9 @@ private:
 public:
 
 	Human();
-	Human(string n, string sname, int a, float mark);
+	Human(string n, string sname, int a) : name(n), surname(sname), age(a) {
+
+	}
 	Human(string n, string sname);
 
 	~Human();

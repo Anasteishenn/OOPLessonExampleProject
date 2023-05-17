@@ -1,75 +1,52 @@
 #include "Human.h"
 
-string Human::get_name() {
+// default constructor
+Human::Human() {
+	name = "no name";
+	surname = "no surname";
+	age = 15;
+}
+
+// constructor with arguments
+Human::Human(string nm, string surnm, int a) {
+	name = nm;
+	surname = surnm;
+	age = a;
+}
+
+Human::~Human() { }
+
+string Human::getName() {
 	return name;
 }
 
-void Human::set_name(string n) {
+void Human::setName(string n) {
 	name = n;
 }
 
-string ::get_surname() {
-	return name;
+string Human::getSurname() {
+	return surname;
 }
 
-void Student::set_surname(string n) {
+void Human::setSurname(string n) {
 	surname = n;
 }
 
-int Student::get_age() {
+int Human::getAge() {
 	return age;
 }
 
-
-void Student::set_avg_mark(float mark) {
-	if (mark >= MIN_MARK && mark <= MAX_MARK) {
-		avg_mark = mark;
+void Human::setAge(int a) {
+	if (a > 0 && a < 110) {
+		age = a;
 	}
 }
 
-// default-constructor (with no-args)
-Student::Student() {
-	//cout << "default-constructor" << endl;
-	name = "no name";
-	surname = "no surname";
-	age = 16;
-	avg_mark = 4;
-}
-
-// constructor with params (with args)
-Student::Student(string n, string sname, int a, float mark) {
-	//cout << "constructor with params" << endl;
-	name = n;
-	surname = sname;
-	age = a;
-	avg_mark = mark;
-}
-
-Student::Student(string n, string sname) {
-	//cout << "constructor with params" << endl;
-	name = n;
-	surname = sname;
-}
-
-Student::~Student() {
-	//cout << "called Student destructor" << endl;
-}
-
-void Student::init(string n, string sname, int a, float mark) {
-	name = n;
-	surname = sname;
-	age = a;
-	avg_mark = mark;
-}
-
-void Student::init_default() {
-	name = "no name";
-	surname = "no surname";
-	age = 0;
-	avg_mark = 0;
-}
-
-string Student::convert_to_string() {
-	return name + " " + surname + " (age = " + to_string(age)
-		+ ", average mark = " + to_string(avg_mark) + ")";
+string Human::convert() {
+	string msg = "";
+	msg += name;
+	msg += " " + surname;
+	msg += " ( age = " + to_string(age);
+	msg += ")";
+	return msg;
 }

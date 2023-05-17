@@ -1,8 +1,9 @@
 #pragma once
-#include "main.h"
+#include "human.h"
 
-class Teacher {
-
+class Teacher : public Human
+{
+private:
 	int power;
 
 public:
@@ -12,7 +13,8 @@ public:
 
 	~Teacher();
 
-	void set_avg_mark(float mark);
+	int get_power();
+	void set_power(int pow);
 
 	string convert_to_string();
 };
