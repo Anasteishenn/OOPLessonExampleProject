@@ -9,12 +9,19 @@ private:
 	int age;
 
 public:
+	static const int MIN_AGE = 0;
+	static const int MAX_AGE = 160;
 
-	Human();
-	Human(string n, string sname, int a) : name(n), surname(sname), age(a) {
+	Human() :name("no name"), surname("no surname"), age(16) {}
 
+	Human(string name, string surname, int age) {
+		this->name = name;
+		this->surname = surname;
+		this->age = age;
 	}
-	Human(string n, string sname);
+
+	Human(string name, string surname)
+		: name(name), surname(surname) {}
 
 	~Human();
 
@@ -24,11 +31,4 @@ public:
 	void set_surname(string n);
 	int get_age();
 	void set_age(int a);
-	float get_avg_mark();
-	void set_avg_mark(float mark);
-
-	void init(string n, string sname, int a, float mark);
-	void init_default();
-	string convert_to_string();
 };
-
