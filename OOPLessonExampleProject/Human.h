@@ -4,31 +4,26 @@
 class Human
 {
 private:
+
+public:
 	string name;
 	string surname;
 	int age;
 
-public:
-	static const int MIN_AGE = 0;
-	static const int MAX_AGE = 160;
-
-	Human() :name("no name"), surname("no surname"), age(16) {}
-
-	Human(string name, string surname, int age) {
-		this->name = name;
-		this->surname = surname;
-		this->age = age;
-	}
-
-	Human(string name, string surname)
-		: name(name), surname(surname) {}
-
+	Human();
+	Human(string nm, string surnm, int a);
 	~Human();
 
-	string get_name();
-	void set_name(string n);
-	string get_surname();
-	void set_surname(string n);
-	int get_age();
-	void set_age(int a);
+	static void test() {
+
+	}
+
+	string getName();
+	void setName(string n);
+	string getSurname();
+	void setSurname(string n);
+	int getAge();
+	void setAge(int a);
+
+	string convert();
 };
